@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+.background {
+  background-color: black;
+}
+
+.login-form {
+  text-align: center;
+  margin-top: 35%;
+  padding-left: 40;
+  padding-right: 40;
+}
+
+.form-field {
+  border-width: 2;
+  border-color: #ffffff;
+  color: #ffffff;
+  border-radius: 80;
+  placeholder-color: #eeeeee;
+  margin-bottom: 15;
+}
+
+.button {
+  outline: 0;
+  background-color: #00aeef;
+  border-radius: 100;
+  width: 100%;
+  border: 0;
+  padding: 15;
+  color: #ffffff;
+  font-size: 14;
+  font-weight: bold;
+  margin-bottom: 15;
+}
+
+.button:highlighted {
+  background-color: #ffffff;
+  color: #00aeef;
+}
+
+.message {
+  margin-top: 15;
+  margin-right: 0;
+  margin-bottom: 0;
+  color: #eeeeee;
+  font-size: 12;
+}
+
+.registration {
+  margin-top: 110;
+  margin-right: 0;
+  margin-bottom: 0;
+  color: #eeeeee;
+  font-size: 12;
+}
