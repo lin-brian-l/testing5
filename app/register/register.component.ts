@@ -64,7 +64,8 @@ export class RegisterComponent implements AfterViewInit {
   }
 
   public back() {
-    this.router.navigate(["/login"], { clearHistory: true })
+    this.router.navigate(["/login"])
+    // this.router.navigate(["/login"], { clearHistory: true })
   }
 
 

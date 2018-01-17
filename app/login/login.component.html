@@ -1,11 +1,7 @@
 <Page>
-  <StackLayout class="background">
+  <StackLayout #stacklayout class="background" (loaded)="printStackClass()">
     <StackLayout class="login-form">
-      <Label class="registration" (tap)="register()">
-        <FormattedString>
-          <Span text="Not registered? "></Span>
-          <Span text="Create an account." fontWeight="Bold"></Span>
-        </FormattedString>
+      <Label #label class="registration" (tap)="register()" text="Register" color="red" (loaded)="printLabelClass()">
       </Label>
     </StackLayout>
   </StackLayout>

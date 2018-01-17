@@ -14,6 +14,9 @@ import { ApplicationEventData, exitEvent, launchEvent, on, resumeEvent, suspendE
 
 export class LoginComponent implements OnInit, AfterViewInit {
 
+  @ViewChild("stacklayout") stacklayout: ElementRef;
+  @ViewChild("label") label: ElementRef;
+
   public constructor(private page: Page, private router: RouterExtensions) {
     console.log("constructing login")
     this.page = page;
@@ -26,6 +29,15 @@ export class LoginComponent implements OnInit, AfterViewInit {
     on(launchEvent, this.onStart.bind(this));
     on(exitEvent, this.onStop.bind(this));
     page.actionBarHidden = true;
+    console.log("page is loaded", page.isLoaded);
+  }
+
+  public printStackClass() {
+    console.log("StackLayout has class: ", this.stacklayout.nativeElement.className)
+  }
+
+  public printLabelClass() {
+    console.log("Label has class: ", this.label.nativeElement.className)
   }
 
   public ngOnInit() {
@@ -45,7 +57,6 @@ export class LoginComponent implements OnInit, AfterViewInit {
   public register() {
     console.log("register");
     this.router.navigate(["/register"])
-    // this.router.navigate(["/register"], { clearHistory: true })
   }
 
   protected onNavigatingTo(arg?: NavigatedData): void {
